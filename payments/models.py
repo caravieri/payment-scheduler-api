@@ -17,4 +17,4 @@ class PaymentSchedule(models.Model):
             raise ValidationError("A data de pagamento não pode ser no futuro.")
 
     def __str__(self):
-        return f"Pagamento {self.valor_pagamento} na agência {self.agencia}, conta {self.conta}"
+        return f"Pagamento {self.valor_pagamento / 100} na agência {self.agencia}, conta {self.conta}"
